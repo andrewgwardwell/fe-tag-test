@@ -8,11 +8,10 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
   @Input() person: any;
-  public expanded: false;
+  public expanded = false;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.person);
   }
 
 }
