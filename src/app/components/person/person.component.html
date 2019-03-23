@@ -1,0 +1,27 @@
+<div class="person__inner inner" [ngClass]="{ 'person__inner--expanded': expanded }">
+  <div class="person__top" (click)="expanded = !expanded">
+    <div class="person__image">
+      <img src="{{ person.picture.medium }}" alt="" />
+    </div>
+    <div class="person__name">
+      <h3>
+        {{ person.name.first | titlecase }} {{ person.name.last | titlecase }}
+      </h3>
+      <span> {{ person.location.city | titlecase }}, {{ person.nat }} </span>
+    </div>
+    <div class="person__toggle">
+      <i *ngIf="!expanded" class="fa fa-lg fa-angle-down"></i>
+      <i *ngIf="expanded" class="fa fa-lg fa-angle-up"></i>
+    </div>
+  </div>
+  <div class="person__bottom">
+    <div class="person__bottom__item">
+      <span>Phone</span>
+      <span class="detail">{{ person.phone }}</span>
+    </div>
+    <div class="person__bottom__item">
+      <span>Email</span>
+      <span class="detail">{{ person.email }}</span>
+    </div>
+  </div>
+</div>

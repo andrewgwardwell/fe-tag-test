@@ -1,0 +1,104 @@
+.person{
+    margin: 12px 0 0;
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        margin: 12px 1% 0;
+        width: 48%;
+    }
+    @media screen and (min-width: 1200px){
+        width: 23%;
+    }
+}
+.person__top{
+    padding: 20px 15px;
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    -webkit-box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.5);
+    transition: all .25s ease;
+    z-index: 2;
+}
+.person__bottom{
+    background: #f76f64;
+    background: -moz-linear-gradient(left, #f76f64 1%, #fd5196 100%);
+    background: -webkit-linear-gradient(left, #f76f64 1%,#fd5196 100%);
+    background: linear-gradient(to right, #f76f64 1%,#fd5196 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f76f64', endColorstr='#fd5196',GradientType=1 );
+    opacity: 0;
+    margin: 0 15px;
+    max-height: 0;
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: row;
+    @media screen and (min-width: 1024px){
+        opacity: 1;
+        max-height: none;
+        margin: 0;
+        padding: 0 15px;
+    }
+}
+.person__bottom__item{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    word-break: break-all;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: flex-start;
+    &:first-of-type{
+        border-right: 2px solid rgba(black, .15);
+    }
+    span{
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    .detail{
+        font-size: 12px;
+    }
+}
+.person__inner--expanded{
+    .person__top{
+        -webkit-box-shadow: -1px 3px 20px -2px rgba(0,0,0,0.5);
+        -moz-box-shadow: -1px 3px 20px -2px rgba(0,0,0,0.5);
+        box-shadow: -1px 3px 20px -2px rgba(0,0,0,0.5);
+    }
+    .person__bottom{
+        
+        max-height: 300px;
+        height: auto;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+}
+.person__image{
+    width: 25%;
+    img{
+        max-width: 100%;
+        border-radius: 50%;
+    }
+}
+.person__name{
+    width: 65%;
+    h3{
+        color: #f76f64;
+        font-weight: 200;
+        margin: 0 0 5px;
+    }
+    span{
+        color: #C3C3C3;
+    }
+}
+.person__toggle{
+    color: #C3C3C3;
+    @media screen and (min-width: 1024px){
+        display: none;
+
+    }
+}
